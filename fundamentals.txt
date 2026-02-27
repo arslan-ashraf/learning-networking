@@ -1,0 +1,58 @@
+------------------------ What are Hubs, Switches, Routers? ------------------------
+
+Hubs - an unitelligent device that broadcasts messages from sender to all devices connected to the hub.
+
+Switch - a more intelligent device that starts much like a hub but then learns which computer's MAC address is on which connection and then only forwards messages from sender to one specific receiver.
+
+Hubs and Switches are used to create networks.  Routers are used to connect networks and exchange data between networks.  To be able to exchange data outside of a local network, a device needs to be able to read IP addresses, hubs and switches do not read IP addresses but routers can.
+
+Router - an intelligent device which itself is a computer.  Many routers run the GNU/Linux OS.  Routers can be configured to treat some traffic differently or give preferential treatment to some protocols, perform network address translation or   (NAT).  They route traffic from one network to another.
+
+Note: routers and switches also have loopback addresses just like end hosts whose loopback address is 127.0.0.1.  Routers' loopback address is 10.1.1.1/32.
+
+
+===================================================================================
+
+------------------------------- What is Ethernet? ---------------------------------
+
+Ethernet is a networking technology standard that defines how networking devices communicate on a local area network (LAN).
+
+The rules of the standard include:
+	- What cables or connectors can be used
+	- How signals are transmitted
+	- How data is formatted
+
+The ethernet standard fits into layer 1 (the physical layer) and layer 2 (the data link layer) of the OSI model and defines various rules and properties.  It is both, a physical transmission standard and a data link standard.
+	- Physical Layer: cables, voltages, signals
+	- Data Link Layer: frames, MAC addresses, error detection
+
+Ethernet requires hardware implementation through:
+	- Network Interface Card (NIC)
+	- Switch ports
+	- PHY chips
+
+and software/firmware/driver support by:
+	- Frame handling
+	- MAC address management
+	- Error detection (Cyclic Redundancy Check or CRC)
+
+The OS interacts with Ethernet via the network driver.  So the Ethernet standard is implemented in hardware and software together.  The standard connector cable for copper Ethernet is RJ-45.
+
+
+===================================================================================
+
+----------------------------- TCP/IP Model & Devices ------------------------------
+
+Physical Layer: bits are sent at this layer and this layer is concerned with how light and electrons can be read as 0s or 1s.  Hubs and repeaters are examples of LAN devices that operate at this layer.
+
+
+Data Link Layer: frames are sent at this layer specifically from one device to another.  Devices at this layer are also responsible for error detection and discovering MAC addresses of connected devices for sending/receiving frames.  It also determines when bits for a frame end and when do they start for the next frame.  Switches and bridges are examples of devices that operate at this layer but they may also operate at the next layer.
+
+
+Network Layer: packets are sent that this layer with the IP protocol being by far the most dominant protocal at the layer.  IP protocol sends devices using IP addresses either through IPv4 or IPv6.  This layer is also concerned with finding the best path in the network for send packets.
+
+
+Transport Layer: segments are sent at this layer and this is where the TCP/UDP protocols are.
+
+
+Application Layer: data is sent at this layer using various protocols such as HTTP, SSH, SMTP, etc.
