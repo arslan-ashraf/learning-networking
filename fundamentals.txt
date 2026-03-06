@@ -1,11 +1,17 @@
 ------------------------ What are Hubs, Switches, Routers? ------------------------
 
 Hubs - an unitelligent device that broadcasts messages from sender to all devices
-connected to the hub.
+connected to the hub.  It operates at the Data Link Layer.
 
 Switch - a more intelligent device that starts much like a hub but then learns
 which computer's MAC address is on which connection and then only forwards 
-messages from sender to one specific receiver.
+messages from sender to one specific receiver.  It operates at the Data Link Layer.
+
+Bridge - a Data Link Layer device that connects two or more LANs into a single
+network.  It has some routing capability.
+
+Wireless Access Point - very similar to a switch but wireless and it operates 
+at the Data Link Layer.
 
 Hubs and Switches are used to create networks.  Routers are used to connect 
 networks and exchange data between networks.  To be able to exchange data outside 
@@ -29,8 +35,8 @@ Ethernet is a networking technology standard that defines how networking devices
 communicate on a local area network (LAN).
 
 The rules of the standard include:
-	- What cables or connectors can be used
-	- How signals are transmitted
+	- What cables or connectors can be used (802.3)
+	- How signals are transmitted over Wi-Fi (802.11)
 	- How data is formatted
 
 The ethernet standard fits into layer 1 (the physical layer) and layer 2 (the data
